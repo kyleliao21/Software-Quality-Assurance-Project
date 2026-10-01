@@ -1,0 +1,5 @@
+Username: test123
+Status: Success
+User Type: admin
+Game Deleted: YES
+User Deleted: YES

@@ -1,2 +1,2 @@
 Logged in as test123 with admin priviledges
-Please type username to delete: test1234
+Please type username to delete: test987
