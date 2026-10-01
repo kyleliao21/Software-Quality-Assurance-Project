@@ -1,4 +1,4 @@
-Username: test123
-Password: Test@123!
+Username: tester1234
+Password: tester
 User Type: admin
 Email: test123@gmail.com
