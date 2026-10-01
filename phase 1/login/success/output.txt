@@ -1,0 +1,9 @@
+Username: test123
+Password: CORRECT
+Login: VALID
+Account Type: admin
+Credit: 100,000
+Current Games Up for sale
+GTA VI: 150.00
+Wolverine: 80.00
+Minecraft: 20.00
