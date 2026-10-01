@@ -1,4 +1,0 @@
-Username: test123
-User Type: admin
-User is successfully logged out
-Transaction file is listed in dailyTransaction.txt
