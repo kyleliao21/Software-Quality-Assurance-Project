@@ -1,0 +1,4 @@
+Username: InvalidUser
+Status: Failure (Username is invalid or does not exist)
+Credit Added: NO
+Transaction Saved: NO

@@ -1,0 +1,3 @@
+Logged in as test123 with admin priviledges 
+Username to add credit to: test1234
+Amount of Credit: 500.0
