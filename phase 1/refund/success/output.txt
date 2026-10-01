@@ -1,0 +1,6 @@
+Buyer Username: buyer123
+Seller Username: seller123
+Status: Success
+Refund Amount: 100.0
+Credit Transferred to Buyer: YES
+Transaction Saved to Daily Transaction File: YES
