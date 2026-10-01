@@ -1,0 +1,3 @@
+Logged in as test123 with admin priviledges 
+Username: InvalidUser
+Amount of Credit: 100.0

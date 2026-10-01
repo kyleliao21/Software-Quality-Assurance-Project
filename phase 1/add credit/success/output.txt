@@ -1,0 +1,5 @@
+Username to add credit to: test1234
+Status: Success
+User Type: admin
+Credit Added: 500.0
+Transaction Saved to Daily Transaction File: YES

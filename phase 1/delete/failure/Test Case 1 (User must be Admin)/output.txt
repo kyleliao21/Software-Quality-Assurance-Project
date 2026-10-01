@@ -1,0 +1,5 @@
+Current User: test123
+User Type: buy-standard
+Status: Failure (User must be an admin)
+User Deleted: NO
+Games Deleted: NO

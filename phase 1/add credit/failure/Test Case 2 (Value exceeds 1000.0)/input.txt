@@ -1,0 +1,3 @@
+Logged in as test123 with admin priviledges 
+Username: test123
+Amount of Credit: 1500.0

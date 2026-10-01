@@ -1,0 +1,5 @@
+Game Name: Minecraft
+Price: 50.00
+Status: Failure (Game name cannot exceed 25 characters)
+Game Listed: NO
+Transaction Saved: NO

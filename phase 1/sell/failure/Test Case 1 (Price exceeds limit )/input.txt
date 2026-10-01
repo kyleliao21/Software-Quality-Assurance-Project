@@ -1,4 +1,3 @@
-User Input:
 Logged in as test123 with admin priviledges 
 Game Name: Minecraft
-Price: 50.00
+Price: 1200.00
