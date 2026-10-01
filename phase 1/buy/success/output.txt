@@ -1,0 +1,10 @@
+Buyer Username: test123
+Seller Username: test1234
+Game Name: GTA V
+Buyer Credit Balance: 100.00
+Status: Success
+Game Added to Buyer Library: YES
+Game Removed from Seller Library: YES
+Price Subtracted from Buyer Account: YES
+Credit Added to Seller Account: YES
+Transaction saved to Daily Transaction File: YES

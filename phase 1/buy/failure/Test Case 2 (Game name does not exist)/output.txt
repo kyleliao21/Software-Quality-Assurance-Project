@@ -1,0 +1,6 @@
+Buyer Username: test123
+User Type: buy-standard
+Buyer Credit Balance: 140.00 
+Status: Failure (Game does not exist)
+Game Bought: NO
+Transferred Credits: NO
