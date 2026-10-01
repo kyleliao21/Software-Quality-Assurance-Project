@@ -1,4 +1,3 @@
-User Output:
 Game Name: Minecraft
 Price: 50.00
 Status: Success
