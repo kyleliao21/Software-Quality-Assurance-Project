@@ -1,0 +1,4 @@
+Username: test123
+Password: password456
+User Type: buy-standard
+Email: test123@gmail.com

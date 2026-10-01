@@ -1,0 +1,5 @@
+Username: test123
+Status: Failure (Username already exists)
+User Type: buy-standard
+Email: test123@gmail.com
+Account Created: NO

@@ -1,0 +1,6 @@
+Username: test123
+Status: Success
+User Type: admin
+Email: test123@gmail.com
+Account Created: YES
+Credit: 0

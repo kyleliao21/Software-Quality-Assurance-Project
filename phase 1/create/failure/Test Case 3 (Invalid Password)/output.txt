@@ -1,0 +1,4 @@
+Username: tester1234
+Status: Failure (Password must be minimum 8 characters, must have at least 1 special character, at least 1 number, at least 1 capital letter)
+User Type: admin
+Email: test123@gmail.com
