@@ -1,0 +1,6 @@
+Game Name: Minecraft
+Price: 50.00
+Status: Failure (Game name already exists)
+Prompt: Enter a different game name
+Game Listed: NO
+Transaction Saved: NO

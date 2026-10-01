@@ -1,0 +1,5 @@
+Current User: test123
+User Type: admin
+Status: Failure (Username must be valid)
+User Deleted NO
+Games Deleted: NO

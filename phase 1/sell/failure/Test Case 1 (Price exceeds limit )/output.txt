@@ -1,0 +1,5 @@
+Game Name: Minecraft
+Price: 1200.00
+Status: Failure (Price cannot exceed 999.99)
+Game Listed: NO
+Transaction Saved: NO

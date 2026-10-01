@@ -1,0 +1,5 @@
+Game Name: Minecraft
+Price: 50.00
+Status: Failure (User does not have sell-standard permissions)
+Game Listed: NO
+Transaction Saved: NO

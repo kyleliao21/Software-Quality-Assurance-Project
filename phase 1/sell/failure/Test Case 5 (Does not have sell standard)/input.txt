@@ -1,0 +1,3 @@
+Logged in as test123 with buy-standard priviledges 
+Game Name: Minecraft
+Price: 50.00
