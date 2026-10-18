@@ -64,6 +64,12 @@ void FrontEnd::handleLogin() {
         return;
     }
 
+    // Load the games from the games file
+    if (!games.loadGames(files)) {
+        displayError("The available games file could not be read.");
+        return;
+    }
+
     // Prompt the user for their username
     string username;
     if (!promptForInput("Enter username: ", username)) return;

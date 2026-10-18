@@ -6,6 +6,7 @@
 #include "FileManager.h"
 #include "SessionManager.h"
 #include "UserStore.h"
+#include "GameStore.h"
 using namespace std;
 
 class FrontEnd {
@@ -24,6 +25,8 @@ class FrontEnd {
         void handleLogin();
         void handleLogout();
         void handleListAccounts();   // privileged, admin only
+        void handleSell();
+        void handleBuy();  
 
         // Helper functions for user interaction
         bool promptForInput(const string& message, string& response);
@@ -34,5 +37,6 @@ class FrontEnd {
         ostream& output;       
         FileManager files;     
         SessionManager session;
-        UserStore users;       
+        UserStore users;
+        GameStore games;
 };
