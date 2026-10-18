@@ -1,0 +1,4 @@
+admin01         AA 000500.00
+buyer01         BS 000050.00
+seller01        SS 000000.00
+END
