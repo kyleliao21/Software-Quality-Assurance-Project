@@ -49,3 +49,14 @@ bool FileManager::readAccounts(vector<User>& users) const {
     }
     return true;
 }
+
+
+bool FileManager::writeEndOfSession() const {
+    // Open the transaction file for writing
+    ofstream file(transactionFile);
+    if (!file) return false;
+
+    // Write the end of session marker
+    file << "00 " << string(USERNAME_WIDTH, ' ') << " " << string(TYPE_WIDTH, ' ') << " 000000.00\n";
+    return static_cast<bool>(file);
+}
