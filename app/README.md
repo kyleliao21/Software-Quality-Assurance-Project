@@ -200,7 +200,7 @@ This transaction does not write anything to the Daily Transaction file, because 
 
 ## 8. What is left for Phase 3
 
-**Build the remaining transactions** (the requirements give the rules for each):
+**Build the remaining transactions**
 
 - `create`: admin only; username at most 15 characters and unique; asks for the account type; record `01`
 - `delete`: admin only; user must exist and not be the current user; cancels that user's games; record `02`
