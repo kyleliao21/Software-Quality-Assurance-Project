@@ -3,7 +3,7 @@
 
 // INPUT: current_accounts.txt, available_games.txt
 // OUTPUT: daily_transaction.txt
-// RUN: ./FrontEnd
+// RUN: ./FrontEnd or to run with a sample test file(must be ran through cmd): ./FrontEnd current_accounts.txt available_games.txt daily_transaction.txt < test.txt
 #include <iostream>
 #include "FileManager.h"
 #include "FrontEnd.h"
