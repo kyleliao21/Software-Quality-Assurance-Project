@@ -25,9 +25,15 @@ class FrontEnd {
         void handleLogin();
         void handleLogout();
         void handleListAccounts();   // privileged, admin only
+        void handleCreate();         // privileged, admin only
+        void handleDelete();         // privileged, admin only
         void handleSell();
-        void handleBuy();  
+        void handleBuy();
+        void handleRefund();         // privileged, admin only
+        void handleAddCredit();
         void handleListGames();
+
+        bool isPermitted(const string& command) const;
 
         // Helper functions for user interaction
         bool promptForInput(const string& message, string& response);
