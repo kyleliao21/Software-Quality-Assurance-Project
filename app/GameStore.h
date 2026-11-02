@@ -54,6 +54,16 @@ class GameStore {
         // Returns a reference to the vector of all available games
         const vector<Game>& getGames() const { return availableGames; }
 
+        // Returns a vector of game names owned by the specified user
+        vector<string> getGamesOwnedBy(const string& username) const {
+            vector<string> names;
+            for (const Game& entry : collections) {
+                // If the entry's seller username matches the specified username, add the game name to the list of names
+                if (entry.getSellerUsername() == username) names.push_back(entry.getName());
+            }
+            return names;
+        }
+
     private:
         vector<Game> availableGames;
         vector<Game> collections;

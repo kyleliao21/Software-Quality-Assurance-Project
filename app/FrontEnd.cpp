@@ -57,6 +57,8 @@ void FrontEnd::handleCommand(const string& command) {
         handleListAccounts();
     } else if (command == "listgames") {
         handleListGames();
+    } else if (command == "listcollections") {
+        handleListCollections();
     } else if (command == "create") {
         handleCreate();
     } else if (command == "delete") {
@@ -127,7 +129,8 @@ void FrontEnd::handleLogout() {
     }
 
     // Write end of session marker to the transaction file and end the session
-    if (!files.writeEndOfSession(session.getCurrentUser())) {
+    const User* currentUser = users.findUser(session.getCurrentUser().getUsername());
+    if (!files.writeEndOfSession(*currentUser)) {
         displayError("The daily transaction file could not be written.");
     }
 
@@ -140,11 +143,11 @@ void FrontEnd::handleLogout() {
 void FrontEnd::handleListAccounts() {
     // Display all user accounts
     displayMessage("Active accounts:");
-    output << left << setw(17) << "Username"
+    output << left << setw(16) << "Username"
            << setw(15) << "Type" << "Credit\n";
 
     for (const User& user : users.getUsers()) {
-        output << left << setw(17) << user.getUsername()
+        output << left << setw(16) << user.getUsername()
                << setw(15) << user.getTypeName()
                << fixed << setprecision(2) << user.getCredit() << "\n";
     }
@@ -157,16 +160,32 @@ void FrontEnd::handleListAccounts() {
 void FrontEnd::handleListGames() {
     // Display all games loaded from the available games file
     displayMessage("Available games:");
-    output << left << setw(28) << "Game"
-           << setw(17) << "Seller" << "Price\n";
+    output << left << setw(27) << "Game"
+           << setw(16) << "Seller" << "Price\n";
 
     for (const Game& game : games.getGames()) {
-        output << left << setw(28) << game.getName()
-               << setw(17) << game.getSellerUsername()
+        output << left << setw(27) << game.getName()
+               << setw(16) << game.getSellerUsername()
                << fixed << setprecision(2) << game.getPrice() << "\n";
     }
 
     displayMessage(to_string(games.getGames().size()) + " game(s).");
+}
+
+
+// Lists all games in the current user's collection
+void FrontEnd::handleListCollections() {
+    string username = session.getCurrentUser().getUsername();
+
+    // Display all games in the user's collection
+    vector<string> ownedGames = games.getGamesOwnedBy(username);
+
+    // Display the user's game collection
+    displayMessage("Game collection of " + username + ":");
+    for (const string& gameName : ownedGames) {
+        output << "  " << gameName << "\n";
+    }
+    displayMessage(to_string(ownedGames.size()) + " game(s).");
 }
 
 

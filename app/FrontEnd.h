@@ -32,6 +32,7 @@ class FrontEnd {
         void handleRefund();         // privileged, admin only
         void handleAddCredit();
         void handleListGames();
+        void handleListCollections();
 
         bool isPermitted(const string& command) const;
 

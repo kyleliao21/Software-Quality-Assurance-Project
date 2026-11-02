@@ -1,7 +1,4 @@
-01 newplayer       SS 000000.00
-06 newplayer       SS 000200.00
-04 GTA VI                     seller01        admin01         024.99
-03 Portal                     admin01         009.99
-05 buyer01         seller01        000005.00
-02 deleteme        FS 000020.00
-00 admin01         AA 000500.00
+04 GTA VI                     seller01        fulluser        024.99
+04 Minecraft                  seller01        fulluser        015.00
+06 fulluser        FS 000500.00
+00 fulluser        FS 000560.01
