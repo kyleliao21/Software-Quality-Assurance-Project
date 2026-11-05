@@ -1,0 +1,5 @@
+Games Distribution Front End. Enter a transaction code (type login to begin).
+Enter transaction: Enter username: Logged in as admin01.
+Enter transaction: Enter new username: Enter account type (admin, full-standard, buy-standard, sell-standard): Error: Unknown account type.
+Enter transaction: Logged out.
+Enter transaction: 

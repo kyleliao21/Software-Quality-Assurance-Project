@@ -1,0 +1,10 @@
+Games Distribution Front End. Enter a transaction code (type login to begin).
+Enter transaction: Enter username: Logged in as admin01.
+Enter transaction: Enter search text: Games matching "admin":
+0 game(s).
+Users matching "admin":
+  admin01
+  sysadmin
+2 user(s).
+Enter transaction: Logged out.
+Enter transaction: 

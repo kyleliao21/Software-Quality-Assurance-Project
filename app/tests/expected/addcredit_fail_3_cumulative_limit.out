@@ -1,0 +1,6 @@
+Games Distribution Front End. Enter a transaction code (type login to begin).
+Enter transaction: Enter username: Logged in as admin01.
+Enter transaction: Enter amount of credit to add: Enter username to credit: Added $600.00 credit to fulluser.
+Enter transaction: Enter amount of credit to add: Enter username to credit: Error: A maximum of $1000.00 can be added to an account per session.
+Enter transaction: Logged out.
+Enter transaction: 

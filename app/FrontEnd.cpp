@@ -59,6 +59,8 @@ void FrontEnd::handleCommand(const string& command) {
         handleListGames();
     } else if (command == "listcollections") {
         handleListCollections();
+    } else if (command == "search") {
+        handleSearch();
     } else if (command == "create") {
         handleCreate();
     } else if (command == "delete") {
@@ -186,6 +188,47 @@ void FrontEnd::handleListCollections() {
         output << "  " << gameName << "\n";
     }
     displayMessage(to_string(ownedGames.size()) + " game(s).");
+}
+
+
+// Handles the search for games and users based on a query string
+void FrontEnd::handleSearch() {
+    string query;
+    if (!promptForInput("Enter search text: ", query)) return;
+    query = trim(query);
+
+    // If the query is empty, display an error message and return
+    if (query.empty()) {
+        displayError("Please enter some text to search for.");
+        return;
+    }
+
+    // Print each game whose name contains the text
+    displayMessage("Games matching \"" + query + "\":");
+    int gameCount = 0;
+    for (const Game& game : games.getGames()) {
+        if (containsText(game.getName(), query)) {
+            output << "  " << left << setw(27) << game.getName() << setw(16)
+                   << game.getSellerUsername() << fixed << setprecision(2) << game.getPrice()
+                   << "\n";
+            gameCount++;
+        }
+    }
+    displayMessage(to_string(gameCount) + " game(s).");
+
+    // Print each user whose username contains the text, excluding hidden admin users
+    displayMessage("Users matching \"" + query + "\":");
+    int userCount = 0;
+    for (const User& user : users.getUsers()) {
+        bool nameMatches = containsText(user.getUsername(), query);
+        bool hiddenFromThisUser =
+            !session.isAdmin() && user.isAdmin() && !games.sellsGames(user.getUsername());
+        if (nameMatches && !hiddenFromThisUser) {
+            output << "  " << user.getUsername() << "\n";
+            userCount++;
+        }
+    }
+    displayMessage(to_string(userCount) + " user(s).");
 }
 
 

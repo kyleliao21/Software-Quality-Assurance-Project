@@ -39,6 +39,12 @@ class GameStore {
             );
         }
 
+        // Checks if a user is currently selling any games in the available games
+        bool sellsGames(const string& username) const {
+            return any_of(availableGames.begin(), availableGames.end(),
+                        [&](const Game& game) { return game.getSellerUsername() == username; });
+        }
+
         // Checks if a user owns a specific game in their collection
         bool ownsGame(const string& username, const string& gameName) const {
             return any_of(collections.begin(), collections.end(), [&](const Game& entry) {

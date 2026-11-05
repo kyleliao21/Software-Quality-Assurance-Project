@@ -33,6 +33,7 @@ class FrontEnd {
         void handleAddCredit();
         void handleListGames();
         void handleListCollections();
+        void handleSearch();
 
         bool isPermitted(const string& command) const;
 

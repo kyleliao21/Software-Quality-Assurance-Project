@@ -1,0 +1,12 @@
+Games Distribution Front End. Enter a transaction code (type login to begin).
+Enter transaction: Enter username: Logged in as fulluser.
+Enter transaction: Available games:
+Game                       Seller          Price
+Spiderman                  seller01        15.00
+Hades                      seller01        24.99
+Celeste                    admin01         19.99
+Minecraft                  fulluser        20.00
+GTA V                      deleteme        60.00
+5 game(s).
+Enter transaction: Logged out.
+Enter transaction: 
