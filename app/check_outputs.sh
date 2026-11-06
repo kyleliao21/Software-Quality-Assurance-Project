@@ -15,9 +15,7 @@ EXPECTED_DIR=tests/expected
 OUTPUT_DIR=tests/outputs/$RUN_NAME
 REPORT=$OUTPUT_DIR/report.txt
 
-# Shows a file in a normal form so harmless differences are ignored:
-#   - tr removes Windows line endings (\r)
-#   - awk 1 adds a final newline if the file does not end with one
+# Normalize a file by removing Windows line endings and ensuring it ends with a newline
 normalize() { tr -d '\r' < "$1" | awk 1; }
 
 passed=0
@@ -28,7 +26,7 @@ for expected in "$EXPECTED_DIR"/*.out; do
     name=$(basename "$expected" .out)
     problems=""
 
-    # 1. Terminal output. -b ignores differences in the amount of spacing.
+    # Terminal output, compared ignoring whitespace differences (so that a test that prints an extra space or two still passes)
     if ! diff -b <(normalize "$EXPECTED_DIR/$name.out") <(normalize "$OUTPUT_DIR/$name.out") \
             > "$OUTPUT_DIR/$name.out.diff" 2>&1; then
         problems="$problems terminal-output"
@@ -36,7 +34,7 @@ for expected in "$EXPECTED_DIR"/*.out; do
           cat "$OUTPUT_DIR/$name.out.diff"; } >> "$REPORT"
     fi
 
-    # 2. Daily transaction file. Compared exactly (every space matters).
+    # Daily transaction file, compared ignoring whitespace differences (so that a test that prints an extra space or two still passes)
     if ! diff <(normalize "$EXPECTED_DIR/$name.etf") <(normalize "$OUTPUT_DIR/$name.atf") \
             > "$OUTPUT_DIR/$name.atf.diff" 2>&1; then
         problems="$problems transaction-file"

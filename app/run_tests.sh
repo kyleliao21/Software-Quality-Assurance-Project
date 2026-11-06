@@ -19,7 +19,7 @@ INPUT_DIR=tests/inputs
 OUTPUT_DIR=tests/outputs/$RUN_NAME
 WORK_DIR=$OUTPUT_DIR/work      # scratch copy of the data files
 
-# Start from an empty results folder so old results can never be mistaken for new ones.
+# Start from an empty results folder so old results can never be mistaken for new ones
 rm -rf "$OUTPUT_DIR"
 mkdir -p "$WORK_DIR"
 
@@ -28,13 +28,10 @@ for input in "$INPUT_DIR"/*.in; do
     name=$(basename "$input" .in)
     echo "running test $name"
 
-    # Give every test fresh copies of the data files. Even if the program wrongly
-    # wrote to one of its input files, the originals in data/ stay untouched and
-    # no test can affect the next one.
+    # Copy the data files to a scratch folder so that each test starts with the same data
     cp "$DATA_DIR"/*.txt "$WORK_DIR"/
 
-    # Create the .atf file empty first, so that a test where the program writes no
-    # transactions still has a file to compare with.
+    # Create an empty daily transaction file for the program to write to. The program will overwrite it, but we create it here so that if the program fails to create it, we can see that in the test results
     : > "$OUTPUT_DIR/$name.atf"
 
     "$PROGRAM" "$WORK_DIR/currentaccounts.txt" "$WORK_DIR/availablegames.txt" \

@@ -1,3 +1,5 @@
+# This script is used to create test files for the addcredit commands. 
+# It uses the mk function defined in mk_test.sh to generate the input and expected output files for each test case.
 source ./mk_test.sh
 
 mk addcredit_success <<'EOF'

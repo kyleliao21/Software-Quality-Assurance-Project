@@ -1,3 +1,5 @@
+# This script is used to create test files for the search commands. 
+# It uses the mk function defined in mk_test.sh to generate the input and expected output files for each test case.
 source ./mk_test.sh
 
 mk search_success_games_and_users <<'EOF'

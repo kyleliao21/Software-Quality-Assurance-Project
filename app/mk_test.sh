@@ -1,8 +1,7 @@
 #!/bin/bash
 # mk_test.sh - helper used to create test files (run with:  source ./mk_test.sh)
 #
-# mk NAME   reads one test from the here-document that follows it. The text is split
-#           into three files at the marker lines "--- terminal" and "--- transactions":
+# mk NAME   reads one test. The text is split into three files at the marker lines "--- terminal" and "--- transactions":
 #
 #   (text before the first marker)  -> tests/inputs/NAME.in        commands typed by the user
 #   (text after "--- terminal")     -> tests/expected/NAME.out     expected terminal output
