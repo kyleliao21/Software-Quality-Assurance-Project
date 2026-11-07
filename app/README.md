@@ -67,10 +67,12 @@ Commands come from standard input (a file, or typed). The four files are: accoun
 The scripts need bash (Git Bash on Windows). From `app/`:
 
 ```
+chmod +x run_tests.sh check_outputs.sh
 ./run_tests.sh latest
 ./check_outputs.sh latest
 ```
 
+1. **Makes** the scripts executable.
 1. **Runs** every test. Results go to `tests/outputs/latest/` (`NAME.out` terminal output, `NAME.atf` transaction file).
 2. **Check** the results. It prints `PASS` or `FAIL` per test and a summary, and saves every difference in `tests/outputs/latest/report.txt` (`<` = expected, `>` = actual).
 3. **Note**: If the input and expected folders are not included, then run `for f in make_*_tests.sh; do bash "$f"; done` in the bash terminal to create the tests for the input and expeted folders. Then run the `./run_tests.sh latest` and `./check_outputs.sh latest` scripts.
