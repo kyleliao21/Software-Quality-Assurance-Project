@@ -1,0 +1,102 @@
+==================== addcredit_06: FAIL (transaction file, terminal output)
+--- transaction file (< expected tests/expected/addcredit_06.etf, > actual addcredit_06.atf)
+1d0
+< 06 fulluser        FS 001000.00
+--- terminal output (< expected tests/expected/addcredit_06.out, > actual addcredit_06.out)
+6c6
+< Added 1000.00 credit to fulluser.
+---
+> Error: session credit limit exceeded.
+
+==================== addcredit_09: FAIL (transaction file, terminal output)
+--- transaction file (< expected tests/expected/addcredit_09.etf, > actual addcredit_09.atf)
+1,2d0
+< 06 fulluser        FS 001000.00
+< 06 buyuser         BS 001000.00
+--- terminal output (< expected tests/expected/addcredit_09.out, > actual addcredit_09.out)
+7c7
+< Added 1000.00 credit to fulluser.
+---
+> Error: session credit limit exceeded.
+11c11
+< Added 1000.00 credit to buyuser.
+---
+> Error: session credit limit exceeded.
+
+==================== addcredit_10: FAIL (transaction file, terminal output)
+--- transaction file (< expected tests/expected/addcredit_10.etf, > actual addcredit_10.atf)
+1d0
+< 06 fulluser        FS 001000.00
+3d1
+< 06 fulluser        FS 001000.00
+--- terminal output (< expected tests/expected/addcredit_10.out, > actual addcredit_10.out)
+6c6
+< Added 1000.00 credit to fulluser.
+---
+> Error: session credit limit exceeded.
+14c14
+< Added 1000.00 credit to fulluser.
+---
+> Error: session credit limit exceeded.
+
+==================== addcredit_11: FAIL (terminal output)
+--- terminal output (< expected tests/expected/addcredit_11.out, > actual addcredit_11.out)
+6c6
+< Error: credit limit exceeded.
+---
+> Error: session credit limit exceeded.
+
+==================== addcredit_16: FAIL (transaction file, terminal output)
+--- transaction file (< expected tests/expected/addcredit_16.etf, > actual addcredit_16.atf)
+1c1
+< 06 fulluser        FS 000010.05
+---
+> 06 fulluser        FS 0000010.5
+--- terminal output (< expected tests/expected/addcredit_16.out, > actual addcredit_16.out)
+6c6
+< Added 10.05 credit to fulluser.
+---
+> Added 10.5 credit to fulluser.
+
+==================== buy_13: FAIL (transaction file, terminal output)
+--- transaction file (< expected tests/expected/buy_13.etf, > actual buy_13.atf)
+1,2d0
+< 03 Admin Game                 admin           010.00
+< 00                    000000.00
+--- terminal output (< expected tests/expected/buy_13.out, > actual buy_13.out)
+10,12c10,11
+< Error: game not available until next session.
+< Enter command:
+< Logout successful.
+---
+> Enter seller username:
+> Error: user does not exist.
+
+==================== delete_11: FAIL (terminal output)
+--- terminal output (< expected tests/expected/delete_11.out, > actual delete_11.out)
+11c11
+< Error: user does not exist.
+---
+> Login successful. Welcome buyuser (BS).
+13,14c13,15
+< Enter username:
+< Login successful. Welcome admin (AA).
+---
+> Error: already logged in.
+> Enter command:
+> Error: invalid command.
+
+==================== sell_19: FAIL (transaction file, terminal output)
+--- transaction file (< expected tests/expected/sell_19.etf, > actual sell_19.atf)
+1,2d0
+< 03 Celeste                    fulluser        020.00
+< 00                    000000.00
+--- terminal output (< expected tests/expected/sell_19.out, > actual sell_19.out)
+10,12c10,11
+< Error: game not available until next session.
+< Enter command:
+< Logout successful.
+---
+> Enter seller username:
+> Error: user does not exist.
+

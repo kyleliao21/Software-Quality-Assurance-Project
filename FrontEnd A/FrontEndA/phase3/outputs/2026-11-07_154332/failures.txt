@@ -1,0 +1,10 @@
+==================== addcredit_10: FAIL (transaction file, terminal output)
+--- transaction file (< expected tests/expected/addcredit_10.etf, > actual addcredit_10.atf)
+3d2
+< 06 fulluser        FS 001000.00
+--- terminal output (< expected tests/expected/addcredit_10.out, > actual addcredit_10.out)
+14c14
+< Added 1000.00 credit to fulluser.
+---
+> Error: session credit limit exceeded.
+
