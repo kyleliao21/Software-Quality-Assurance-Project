@@ -1,0 +1,14 @@
+Games Distribution Front End. Enter a transaction code (type login to begin).
+Enter transaction: Enter username: Logged in as admin01.
+Enter transaction: Active accounts:
+Username        Type           Credit
+admin01         admin          500.00
+fulluser        full-standard  100.00
+buyer01         buy-standard   100.00
+seller01        sell-standard  50.00
+pooruser        buy-standard   10.00
+deleteme        full-standard  20.00
+sysadmin        admin          900.00
+7 account(s).
+Enter transaction: Logged out.
+Enter transaction: 
