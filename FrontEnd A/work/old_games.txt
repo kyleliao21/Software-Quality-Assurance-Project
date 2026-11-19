@@ -1,0 +1,4 @@
+Stardew Valley             seller01        015.00
+Hades                      seller01        024.99
+GTA V                      deleteme        060.00
+END                                        000.00
