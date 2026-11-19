@@ -27,6 +27,12 @@ void CreateTransaction::execute(Session& session, Console& console) {
         return;
     }
 
+    // Account managers have admin privileges, except that they cannot create admins
+    if (session.getCurrentUser().isAccountManager() && userType == Config::USER_TYPE_ADMIN) {
+        console.printError("account managers cannot create admins.");
+        return;
+    }
+
     // New accounts start with no credit (client clarification)
     const Cents startingCredit = 0;
     session.addUser(User(username, userType, startingCredit));

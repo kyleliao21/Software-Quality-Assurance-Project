@@ -33,7 +33,7 @@ void SearchTransaction::execute(Session& session, Console& console) {
         }
     }
 
-    bool viewerIsAdmin = session.getCurrentUser().isAdmin();
+    bool viewerIsAdmin = session.getCurrentUser().hasAdminPrivileges();
     std::vector<std::string> matchingUsers;
     for (const User& user : session.getUsers()) {
         if (!containsIgnoringCase(user.getName(), query)) {

@@ -5,4 +5,5 @@ selluser        SS 000500.00
 pooruser        FS 000005.00
 richuser        FS 999000.00
 abcdefghijklmno FS 000100.00
+manager1        AM 000300.00
 END                000000.00

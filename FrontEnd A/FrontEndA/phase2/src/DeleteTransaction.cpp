@@ -23,6 +23,12 @@ void DeleteTransaction::execute(Session& session, Console& console) {
         return;
     }
 
+    // Account managers have admin privileges, except that they cannot delete admins
+    if (session.getCurrentUser().isAccountManager() && found->isAdmin()) {
+        console.printError("account managers cannot delete admins.");
+        return;
+    }
+
     // Copy the user before removing them: removeUser rebuilds the user list,
     // so 'found' no longer points at a valid user afterwards
     const User deletedUser = *found;

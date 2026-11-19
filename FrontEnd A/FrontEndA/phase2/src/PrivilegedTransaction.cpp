@@ -7,5 +7,5 @@
 
 // Returns true only if the given user is an admin.
 bool PrivilegedTransaction::isAllowedFor(const User& user) const {
-    return user.isAdmin();
+    return user.hasAdminPrivileges();
 }

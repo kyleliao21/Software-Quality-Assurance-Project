@@ -1,7 +1,7 @@
 // PrivilegedTransaction.h
 //
 // PrivilegedTransaction
-// Base class for privileged transactions: the ones only an admin (AA) may run
+// Base class for privileged transactions: the ones only an admin (AA) or account manager (AM) may run
 // (create, delete, refund and listaccounts). It overrides isAllowedFor once,
 // so those commands inherit the admin check instead of each repeating it.
 // FrontEnd runs the check before execute(), so a non-admin gets
